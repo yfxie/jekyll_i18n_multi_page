@@ -18,6 +18,9 @@ end
 
 Jekyll::Hooks.register :site, :post_read do |site|
   config = site.config['i18n']
+  return unless config
+
+  I18n.reload!
 
   locale_config_mappings = config.reduce({}) do |map, config|
     map[config['locale']] = config
