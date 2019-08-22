@@ -1,5 +1,10 @@
 # Jekyll I18n MultiPage
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/706668635f16a2f4de81/maintainability)](https://codeclimate.com/github/yfxie/jekyll_i18n_multi_page/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/706668635f16a2f4de81/test_coverage)](https://codeclimate.com/github/yfxie/jekyll_i18n_multi_page/test_coverage)
+[![Build Status](https://travis-ci.org/yfxie/jekyll_i18n_multi_page.svg?branch=master)](https://travis-ci.org/yfxie/jekyll_i18n_multi_page)
+[![Gem Version](https://badge.fury.io/rb/jekyll_i18n_multi_page.svg)](https://badge.fury.io/rb/jekyll_i18n_multi_page)
+
 Generate multiple pages for different locales based on single template.
 
 ## Installation
