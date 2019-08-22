@@ -1,0 +1,7 @@
+i18n:
+  - path: /
+    locale: en
+  - path: /tw
+    locale: zh-TW
+  - path: /tw/en
+    locale: en-TW
