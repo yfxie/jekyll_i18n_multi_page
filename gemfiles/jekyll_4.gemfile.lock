@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: ..
   specs:
     jekyll_i18n_multi_page (0.2.1)
       activesupport (~> 6.0)
@@ -114,6 +114,7 @@ PLATFORMS
 DEPENDENCIES
   appraisal (~> 2.2)
   bundler (~> 1.17)
+  jekyll (~> 4.0)
   jekyll_i18n_multi_page!
   pry (~> 0.12)
   rake (~> 10.0)

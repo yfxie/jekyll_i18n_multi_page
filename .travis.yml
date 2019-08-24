@@ -4,6 +4,9 @@ language: ruby
 cache: bundler
 rvm:
   - 2.6.3
+gemfile:
+  - gemfiles/jekyll_3.gemfile
+  - gemfiles/jekyll_4.gemfile
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
