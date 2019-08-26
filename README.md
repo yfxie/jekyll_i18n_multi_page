@@ -28,7 +28,7 @@ plugins:
 
 ## Usage
 
-Declare available locales in your website in `_config.yml`:
+Declare available locales in `_config.yml`:
 
 ```yml
 i18n:
@@ -58,16 +58,19 @@ zh-TW:
     hello: 哈囉
 ```
 
-`page.i18n` is the way to access the current localized contents, said you have a HTML named `index.html` with content as the following:
+`page.i18n` is the way to access the current localized contents, said you have a HTML named `index.html`:
+
 ```html
 ---
 ---
+{{ page.i18n.title }}
 {{ page.i18n.hello }}
 ```
 
-After building of Jekyll, the dist folder should have two files `index.html` and `tw/index.html`
+After building, the dist folder should have two files `index.html` and `tw/index.html`.
 
 Assume you have a file named `some/where/my.html` you should have its path in the localization file:
+
 ```yml
 # _i18n/my-en-site.yml
 en:
@@ -97,6 +100,16 @@ i18n_disabled: true
 ---
 ```
 Using `i18n_disabled` to tell the plugin do not do anything for me.
+
+**Show/Hide something for certain locales**
+
+```html
+---
+---
+{% if page.i18n_locale == 'en' %}
+You will see me only in the en page.
+{% end %}
+```
 
 **Translate helper**
 
