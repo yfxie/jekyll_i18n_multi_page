@@ -28,7 +28,7 @@ plugins:
 
 ## Usage
 
-Declare available locales in `_config.yml`:
+Declare available locales in Jekyll config `_config.yml`:
 
 ```yml
 i18n:
@@ -90,7 +90,7 @@ i18n_locales: ['zh-TW']
 ---
 {{ page.i18n.hello }}
 ```
-Using `i18n_locales` to declare the support locales. Then Jekyll will build `tw/index.html` file only.
+Using `i18n_locales` to declare the supported locales. In this example, Jekyll will build `tw/index.html` file only.
 
 **How to disable the features on certain pages**
 
