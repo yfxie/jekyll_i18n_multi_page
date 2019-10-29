@@ -118,6 +118,19 @@ You will see me only in the en page.
 ```
 `t` tag provides a way to translate content. When you take this way, you must write a full path.
 
+**i18n Filter**
+
+the filter is useful for forlooop in the case of page.i18n being unavailable. For example:
+
+```
+---
+i18n_disabled: true
+i18n_locale: zh-TW
+---
+{% t my.array %} <!-- the result from tags can not be reused like variable. -->
+{% assign items = 'my.array' | i18n %}
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/yfxie/jekyll_i18n_multi_page. 

@@ -4,6 +4,7 @@ require 'active_support/core_ext/hash'
 require 'jekyll_i18n_multi_page/version'
 require 'jekyll_i18n_multi_page/page_extension'
 require 'jekyll_i18n_multi_page/translate_tag'
+require 'jekyll_i18n_multi_page/filters'
 
 module JekyllI18nMultiPage; end
 
@@ -47,3 +48,4 @@ Jekyll::Hooks.register :site, :post_read do |site|
 end
 
 Liquid::Template.register_tag('t', JekyllI18nMultiPage::TranslateTag)
+Liquid::Template.register_filter(JekyllI18nMultiPage::Filters)

@@ -3,3 +3,8 @@ zh-TW:
   index:
     title: 中文標題
     hello: 哈囉
+
+  test_filter_items:
+    - item1
+    - item2
+    - item3

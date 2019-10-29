@@ -58,4 +58,13 @@ RSpec.describe JekyllI18nMultiPage do
       expect(File.read(dist('tw/en/t-tag.html'))).to include('Hello')
     end
   end
+
+  describe 'i18n filter' do
+    it 'can assign translate result to variable' do
+      content = File.read(dist('test-filers.html'))
+      expect(content).to include('item1')
+      expect(content).to include('item2')
+      expect(content).to include('item3')
+    end
+  end
 end
