@@ -4,7 +4,6 @@ require 'active_support/core_ext/hash'
 require 'jekyll_i18n_multi_page/version'
 require 'jekyll_i18n_multi_page/page_extension'
 require 'jekyll_i18n_multi_page/translate_tag'
-require 'jekyll_i18n_multi_page/filters'
 
 module JekyllI18nMultiPage; end
 
@@ -13,8 +12,16 @@ Jekyll::Page.class_eval do
   prepend JekyllI18nMultiPage::PageExtension
 end
 
+
 Jekyll::Hooks.register :site, :after_init do |site|
   I18n.load_path << Dir[File.join(site.config['source'], '_i18n', '**/*.{yml,yaml}')]
+end
+
+Jekyll::Hooks.register :pages, :pre_render do |page, payload|
+  if page.i18n_locale
+    result = I18n.t('.', locale: page.i18n_locale)
+    payload['i18n'] = { result: result }.with_indifferent_access[:result]
+  end
 end
 
 Jekyll::Hooks.register :site, :post_read do |site|
@@ -48,4 +55,3 @@ Jekyll::Hooks.register :site, :post_read do |site|
 end
 
 Liquid::Template.register_tag('t', JekyllI18nMultiPage::TranslateTag)
-Liquid::Template.register_filter(JekyllI18nMultiPage::Filters)

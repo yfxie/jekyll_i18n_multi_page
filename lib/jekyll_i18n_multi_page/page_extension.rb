@@ -9,6 +9,10 @@ module JekyllI18nMultiPage
       data['i18n_disabled']
     end
 
+    def i18n_locale
+      data['i18n_locale']
+    end
+
     def template
       return super if i18n_disabled
       "/:i18n_path#{super}"

@@ -4,7 +4,7 @@ zh-TW:
     title: 中文標題
     hello: 哈囉
 
-  test_filter_items:
+  test_items:
     - name: item1
     - name: item2
     - name: item3

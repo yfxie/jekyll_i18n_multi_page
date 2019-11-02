@@ -2,7 +2,6 @@
 i18n_disabled: true
 i18n_locale: zh-TW
 ---
-{% assign items = 'test_filter_items' | i18n %}
-{% for item in items %}
+{% for item in i18n.test_items %}
   {{ item.name }}
 {% endfor %}

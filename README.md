@@ -118,17 +118,19 @@ You will see me only in the en page.
 ```
 `t` tag provides a way to translate content. When you take this way, you must write a full path.
 
-**i18n Filter**
+**i18n global variable**
 
-the filter is useful for forlooop in the case of page.i18n being unavailable. For example:
+`i18n` is a global variable provides you a way to access the root of localization.
 
 ```
 ---
 i18n_disabled: true
 i18n_locale: zh-TW
 ---
-{% t my.array %} <!-- the result from tags can not be reused like variable. -->
-{% assign items = 'my.array' | i18n %}
+{{ i18n.some.page.title }}
+{% for item in i18n.some.array %}
+...
+{% endfor %}
 ```
 
 ## Contributing

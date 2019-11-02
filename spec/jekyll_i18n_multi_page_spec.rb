@@ -59,9 +59,9 @@ RSpec.describe JekyllI18nMultiPage do
     end
   end
 
-  describe 'i18n filter' do
-    it 'can assign translate result to variable' do
-      content = File.read(dist('test-filers.html'))
+  describe 'i18n global variable' do
+    it 'can access the root from i18n global variables' do
+      content = File.read(dist('i18n-global-variable.html'))
       expect(content).to include('item1')
       expect(content).to include('item2')
       expect(content).to include('item3')
