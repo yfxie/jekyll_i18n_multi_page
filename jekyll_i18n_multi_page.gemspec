@@ -31,5 +31,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "jekyll", ">= 3.0"
   spec.add_dependency "i18n"
-  spec.add_dependency "activesupport", "~> 6.0"
+  spec.add_dependency "activesupport", ">= 6", "< 8"
 end
